@@ -1,16 +1,20 @@
 *{
     box-sizing: border-box;
+    /* font-size: medium; */
+    -moz
 }
 body{
     padding:0;
     margin:0;
 }
+
 /* desktop view for nav-bar */
 div.nav-bar{
     width:100%;
     height:70px;
     background-color: rgb(0,0,70);
     position: relative;
+    
 }
 div.nav-bar a.linkArray{
     display: block;
@@ -139,3 +143,139 @@ div.header img{
     }
 }
 /* mobile view for header ends */
+/* desktop view for main page */
+body div.skills{
+    width:100%;
+    height:450px;
+    padding:2.5em;
+    clear:both;
+}
+div.skills .summary-skills,div.skills .work-portfolio{
+    width:40%;
+    height:100%;
+    float:left;
+    border-style: inset; 
+    margin-left:2em;
+    margin-right:2em;
+    padding:1em;
+}
+/* div.work-experience p.community{
+    text-indent: 3em;
+} */
+/* desktop view for main page ends */
+/* mobile view for main page starts */
+@media screen and (max-width:800px){
+    body div.skills{
+        height: 610px;
+        padding-right:2em;
+        padding-left:2em;
+    }
+}
+div.skills .summary-skills,div.skills .work-portfolio{
+    width:45%;
+    margin:0;
+    margin-right:0.5em;
+    margin-left:0.5em;
+
+}
+@media screen and (max-width:685px){
+    body div.skills{
+        height:700px;
+    }
+}
+@media screen and (max-width:655px){
+    body div.skills{
+        height: 1000px;
+    }
+    div.skills .summary-skills,div.skills .work-portfolio{
+        width:70%;
+        float:none;
+        clear:both;
+        height:50%;
+        margin:auto;
+    }
+    div.skills .work-portfolio{
+        margin-top:1.5em;
+        height:40%;
+    }
+}
+@media screen and (max-width:591px){
+    div.skills .work-portfolio{
+        height:50%;
+    }
+}
+@media screen and (max-width:501px){
+    div.skills .summary-skills,div.skills .work-portfolio{
+        width:85%;
+    }
+}
+@media screen and (max-width:433px){
+    div.skills .summary-skills,div.skills .work-portfolio{
+        width:100%;
+    }
+}
+@media screen and (max-width:381px){
+    body div.skills{
+        height:1200px;
+    }
+    div.skills .summary-skills{
+        height:45%;
+    }
+    div.skills .work-portfolio{
+        height:55%;
+    }
+}
+@media screen and (max-width:325px){
+    body div.skills{
+        height:1400px;
+    }
+}
+@media screen and (max-width:263px){
+    body div.skills{
+        padding-left: 0.3em;
+        padding-right:0.3em
+    }
+}
+@media screen and (max-width:215px){
+    body div.skills{
+        height:1800px;
+    }
+}
+/* mobile view for main page ends */
+/* desktop view for footer */
+body div.footer{
+    width:100%;
+}
+div.footer .upper-footer{
+    padding-top:1em;
+    padding-bottom: 1em;
+    width:100%;
+    text-align: center;
+    background-color: rgb(15, 15, 20)
+}
+.upper-footer a{
+    font-size: 50px;
+    display: inline-block;
+    margin-left:1em;
+    color:cornsilk
+}
+.upper-footer a:hover{
+    color:blue;
+}
+.lower-footer{
+    background-color: rgb(0, 0, 0);
+    height:60px;
+    padding-top:1em;
+    padding-bottom: 1em;
+}
+.lower-footer p{
+    color:white;
+    text-align: center;
+}
+/* desktop view for footer ends */
+/* mobile view for desktop */
+@media screen and (max-width:400px){
+    .upper-footer a{
+        font-size:30px;
+    }
+}
