@@ -17,7 +17,7 @@ const showLinks = () => {
 }
 window.addEventListener("resize", () => {
     if (window.innerWidth >= 800) { // this destroys the persistence property it maintains on resize from smaller screen to bigger screen
-        document.getElementsByClassName('icon-bar')[0].style.display = none; // hides the icon bar;
+        document.getElementsByClassName('icon-bar')[0].style.display = "none"; // hides the icon bar;
         let linkArrayClassVariable = document.getElementsByClassName('linkArray');
         for (let counter = 0; counter < linkArrayClassVariable.length; counter++) { // to display all other links independently
             linkArrayClassVariable[counter].style.display = "block";
