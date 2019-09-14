@@ -1,12 +1,42 @@
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   padding: 0;
   margin: 0;
 }
+/* animate */
+.animate-right {
+  position: relative;
+  -webkit-animation: animateright 0.4s;
+  animation: animateright 0.4s;
+}
+@-webkit-keyframes animateright {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
 
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes animateright {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+/* ================= */
 /* desktop view for nav-bar */
 
 div.nav-bar {
@@ -42,7 +72,7 @@ a.icon-bar {
 }
 /* desktop view for nav-bar ends */
 /* mobile view for nav-bar starts */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 800px) {
   div.nav-bar a:nth-child(2),
   div.nav-bar a:nth-child(3) {
     display: none;
@@ -51,7 +81,8 @@ a.icon-bar {
     width: 100%;
     text-align: left;
     padding-left: 1em;
-    opacity: 0.8;
+    /* opacity: 0.8; */
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   div.nav-bar a:nth-child(3) {
@@ -78,6 +109,10 @@ a.icon-bar {
     padding-right: 1em;
     text-align: right;
   }
+  div.nav-bar a.icon-bar:hover {
+    background-color: inherit;
+    outline: none;
+  }
 }
 /* mobile view for nav-bar ends */
 /* desktop view for header */
@@ -89,8 +124,8 @@ div.header {
   background-attachment: fixed;
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
 }
@@ -99,7 +134,7 @@ div.header img {
   display: block;
   /* margin:auto; */
   border-radius: 100%;
-  width: 240px;
+  width: 220px;
   height: 70%;
 }
 /* desktop view for header ends */
@@ -112,54 +147,52 @@ div.header img {
 }
 /* mobile view for header ends */
 /* desktop view for main page */
-body div.skills {
+body main.skills {
   width: 100%;
   padding: 2.5em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  clear: both;
+  justify-content: space-around;
 }
 
-div.skills .summary-skills,
-div.skills .work-portfolio {
+main.skills .summary-skills,
+main.skills .work-portfolio {
   width: 40%;
-  box-shadow: 2px 2px 10px gray;
-  margin-left: 2em;
-  margin-right: 2em;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
   padding: 1em;
 }
-div.skills .summary-skills:hover,
-div.skills .work-portfolio:hover {
+main.skills .summary-skills:hover,
+main.skills .work-portfolio:hover {
   box-shadow: 2px 2px 2px gray;
 }
 /* desktop view for main page ends */
 /* mobile view for main page starts */
 @media screen and (max-width: 800px) {
-  div.skills .summary-skills,
-  div.skills .work-portfolio {
+  main.skills .summary-skills,
+  main.skills .work-portfolio {
     width: 80%;
   }
-  div.skills .work-portfolio {
-    margin-top: 2em;
+  main.skills .work-portfolio {
+    margin-top: 1.5em;
   }
 }
-@media screen and (max-width: 500px) {
-  body div.skills {
+@media screen and (max-width: 600px) {
+  body main.skills {
     padding: 1.2em;
   }
-  div.skills .summary-skills,
-  div.skills .work-portfolio {
+  main.skills .summary-skills,
+  main.skills .work-portfolio {
     width: 93%;
   }
 }
-@media screen and (max-width: 300px) {
-  body div.skills {
+@media screen and (max-width: 400px) {
+  body main.skills {
     padding: 1em;
   }
-  div.skills .summary-skills,
-  div.skills .work-portfolio {
+  main.skills .summary-skills,
+  main.skills .work-portfolio {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
@@ -174,15 +207,17 @@ body div.footer {
   padding: 0;
   padding-top: 0.3em;
   margin: 0;
-}
-div.footer h3 {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 div.footer .upper-footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
+  align-items: center;
   /* padding-top: 1em;*/
   padding-bottom: 1em;
   width: 100%;
@@ -194,10 +229,11 @@ div.footer .upper-footer {
   display: block;
   margin-left: 1em;
   color: cornsilk;
+  transition-duration: 0.4s;
 }
 
 .upper-footer a:hover {
-  color: blue;
+  color: black;
   cursor: pointer;
 }
 
@@ -205,6 +241,7 @@ div.footer .upper-footer {
   background-color: rgb(0, 0, 0);
   padding-top: 1em;
   padding-bottom: 1em;
+  width: 100%;
 }
 
 .lower-footer p {
