@@ -6,6 +6,7 @@
 body {
   padding: 0;
   margin: 0;
+  position: relative;
 }
 /* animate */
 .animate-right {
@@ -35,8 +36,57 @@ body {
     opacity: 1;
   }
 }
+.spin {
+  -webkit-animation: spin 0.6s;
+  animation: spin 0.6s;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /* ================= */
+/* preloader */
+body .preloader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.9);
+  z-index: 999999999;
+  color: cornsilk;
+}
+body .preloader .spin-loader {
+  border-style: solid;
+  border-width: thin;
+  border-left-color: rgb(0, 0, 0);
+  border-right-color: rgb(255, 255, 255);
+  border-top-color: rgb(34, 139, 34);
+  border-bottom-color: rgb(51, 255, 255);
+  height: 200px;
+  width: 200px;
+  -webkit-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+  border-radius: 100%;
+  margin-bottom: 3em;
+}
 /* desktop view for nav-bar */
 
 div.nav-bar {
@@ -169,6 +219,10 @@ div.skills .work-portfolio {
     0 3px 1px -2px rgba(0, 0, 0, 0.2);
   padding: 1em;
 }
+div.skills .summary-skills ul {
+  line-height: 2;
+  list-style-type: georgian;
+}
 /* desktop view for div skills page ends */
 /* mobile view for div skills page starts */
 @media screen and (max-width: 800px) {
@@ -203,13 +257,54 @@ div.skills .work-portfolio {
 /* form */
 main div.form {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  /* align-content: center; */
   align-items: center;
+  padding: 0 2.5em 3em 2.5em;
 }
 main div.form form {
   display: flex;
   flex-direction: column;
   width: 50%;
+  padding: 1em 0 0em 0;
+}
+main div.form form input,
+main div.form form textarea {
+  margin-bottom: 1em;
+  border-style: solid;
+  border-width: 0.6px;
+  height: 35px;
+  border-radius: 10px;
+  padding-left: 1em;
+  box-shadow: 0 2px 20px 0 rgba(80, 80, 80, 0.2);
+  outline: none;
+  border-color: #d5dee6;
+}
+main div.form form textarea {
+  padding: 0.5em 0 0 1em;
+  height: 100px;
+}
+main div.form img {
+  width: 30%;
+}
+main div.form form button {
+  width: 150px;
+  height: 30px;
+  outline: none;
+  border-style: solid;
+  border-color: rgb(15, 15, 20);
+  background-color: rgb(15, 15, 20);
+  color: #ffffff;
+  align-self: center;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+}
+main div.form form button:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  transform: scaleX(1.1);
+  transform: scaleY(1.1);
 }
 /* mobile view for div skills page ends */
 /* desktop view for footer */

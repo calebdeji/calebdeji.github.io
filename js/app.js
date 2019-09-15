@@ -25,3 +25,9 @@ window.addEventListener("resize", () => {
     }
 });
 document.getElementById('icon-bar').addEventListener("click", showLinks); // for smaller screen to trigger the click on icon bar;
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        const preloaderContainer = document.getElementsByClassName("preloader")[0];
+        preloaderContainer.style.display = "none";
+    }, 7000)
+})

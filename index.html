@@ -12,7 +12,7 @@
         rel="stylesheet"
         href="/css/css.css"
     ></link>
-
+    <link rel="stylesheet" href="./css/typing.css">
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -60,6 +60,26 @@
 </head>
 
 <body id="body">
+    <div class="preloader">
+        <div class="spin-loader spin">
+
+        </div>
+        <div>
+            <p class="text">Welcome 😉</p>
+            
+        </div>
+    </div>
+    <script>
+        function adjustHeight(){
+            let windowsHeight = window.innerHeight;
+            const preloaderContainer = document.getElementsByClassName("preloader")[0];
+            preloaderContainer.style.height = windowsHeight+'px';
+            // console.log(preloaderContainer.style.height);
+        }
+        window.addEventListener("resize",()=>{
+            adjustHeight();
+        })
+    </script>
     <div class="nav-bar">
         <a
             href="#body"
@@ -105,13 +125,11 @@
                     <p>
                         Ogunwale Pelumi Caleb is a third-year student
                     of the Federal University of Technology,
-                    Akure, a front-end web developer with less than two years of experience
+                    Akure, a front-end web developer with less than a year of experience
                     in Web Applications and Proficiency in Solving
                     Mathematical Algorithms with Python Programming.
                     I am a strong believer in teamwork, open source projects,
                     community building and as well academically buoyant.
-                    I have less than two years of experience
-                    in Front-end technologies HTML5, CSS, JavaScript, JQuery .
                     </p>
                 </div>
 
@@ -119,17 +137,15 @@
                     <h3>Skills</h3>
 
                     <p>
-                        Proficient in
 
                         <ul>
                             <li>HTML, HTML5</li>
-
                             <li>CSS, CSS3</li>
-
                             <li>JavaScript, JQuery library</li>
+                            <li>A newbie in React</li>
                         </ul>
 
-                        <li>A newbie in React</li>
+                        
                     </p>
                 </div>
             </div>
@@ -175,6 +191,17 @@
                 </div>
             </div>
         </div>
+        <div class="form">
+            <form action="https://formspree.io/calebdeji06@gmail.com.tld" method="POST">
+                <input type="text" name="name" placeholder="Your name">
+                <input type="email" name="client_email" id="" placeholder="Your email">
+                <input type="tel" name="Telephone number" id="" placeholder="Your number">
+                <input type="text" name="Subject" id="" placeholder="Subject of the message">
+                <textarea name="Message" id="" placeholder="Message"></textarea>
+                <button type="submit">Send Message <i class="fab fa-arrow-right"></i></button>
+            </form>
+            <img src="./images/caleb.jpeg" alt="Calebdeji">
+        </div>
     </main>
 
     <footer class="footer">
@@ -196,7 +223,7 @@
 
         <div class="lower-footer">
             <p>
-                &copy Copyright 2018 | All rights reserved | Calebdeji
+                &copy Copyright 2019 | All rights reserved | Calebdeji
             </p>
         </div>
     </footer>
