@@ -122,7 +122,7 @@ a.icon-bar {
 }
 /* desktop view for nav-bar ends */
 /* mobile view for nav-bar starts */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   div.nav-bar a:nth-child(2),
   div.nav-bar a:nth-child(3) {
     display: none;
@@ -225,7 +225,7 @@ div.skills .summary-skills ul {
 }
 /* desktop view for div skills page ends */
 /* mobile view for div skills page starts */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   div.skills .summary-skills,
   div.skills .work-portfolio {
     width: 80%;
@@ -234,7 +234,7 @@ div.skills .summary-skills ul {
     margin-top: 1.5em;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   body div.skills {
     padding: 1.2em;
   }
@@ -257,7 +257,7 @@ div.skills .summary-skills ul {
 /* form */
 main div.form {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   /* align-content: center; */
   align-items: center;
   padding: 0 2.5em 3em 2.5em;
@@ -284,9 +284,6 @@ main div.form form textarea {
   padding: 0.5em 0 0 1em;
   height: 100px;
 }
-main div.form img {
-  width: 30%;
-}
 main div.form form button {
   width: 150px;
   height: 30px;
@@ -305,6 +302,25 @@ main div.form form button:hover {
   color: rgb(0, 0, 0);
   transform: scaleX(1.1);
   transform: scaleY(1.1);
+}
+/* mobile view for form */
+@media screen and (max-width: 900px) {
+  main div.form form {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 700px) {
+  main div.form form {
+    width: 93%;
+  }
+  main div.form {
+    padding: 1.2em;
+  }
+}
+@media screen and (max-width: 450px) {
+  main div.form {
+    padding: 1em;
+  }
 }
 /* mobile view for div skills page ends */
 /* desktop view for footer */
