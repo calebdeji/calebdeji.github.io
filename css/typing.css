@@ -2,7 +2,7 @@ body .preloader .text {
   font-family: Courier, monospace;
   overflow: hidden;
   letter-spacing: 2px;
-  animation: typing 5s steps(30, end), blink 0.75s infinite;
+  animation: typing 3s steps(30, end), blink 0.75s infinite;
   white-space: nowrap;
   word-break: break-all;
   font-size: 30px;

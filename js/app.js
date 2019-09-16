@@ -29,5 +29,5 @@ window.addEventListener("load", () => {
     setTimeout(() => {
         const preloaderContainer = document.getElementsByClassName("preloader")[0];
         preloaderContainer.style.display = "none";
-    }, 7000)
+    }, 7000);
 })
