@@ -169,7 +169,9 @@ a.icon-bar {
 div.header {
   height: 300px;
   width: 100%;
-  background-image: url("../images/background.jpg");
+  /* background-image: url("../images/background.jpg"); */
+  background-image: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0, 0)),
+    url("../images/background.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
