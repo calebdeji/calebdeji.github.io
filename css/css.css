@@ -71,7 +71,7 @@ body .preloader {
   justify-content: center;
   background-color: rgb(0, 0, 0, 0.95);
   z-index: 999999999;
-  color: cornsilk;
+  color: #ffffff;
 }
 body .preloader .spin-loader {
   border-style: solid;
@@ -145,13 +145,14 @@ a.icon-bar {
     width: 70%;
     text-align: left;
     padding-left: 1em;
+    background-color: rgba(0, 0, 0, 0);
   }
 
   div.nav-bar a.icon-bar {
     display: block;
     position: absolute;
     right: 0;
-    color: cornsilk;
+    color: #ffffff;
     font-size: 20px;
     padding-top: 1em;
     width: 30%;
@@ -338,7 +339,7 @@ body footer.footer {
   align-items: center;
 }
 footer h3 {
-  color: cornsilk;
+  color: #ffffff;
 }
 footer.footer .upper-footer {
   display: flex;
@@ -356,7 +357,7 @@ footer.footer .upper-footer {
   font-size: 50px;
   display: block;
   margin: 0em 0.5em 0em 0.5em;
-  color: cornsilk;
+  color: #ffffff;
   transition-duration: 0.4s;
 }
 
