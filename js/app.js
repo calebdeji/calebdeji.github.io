@@ -1,4 +1,4 @@
-const iconType = document.getElementById('iconLib');
+const iconType = document.getElementById("iconLib");
 const linkArray = document.getElementsByClassName("linkArray");
 
 const showLinks = () => {
@@ -13,21 +13,41 @@ const showLinks = () => {
         }
         iconType.className = "fa fa-bars";
     }
-
-}
+};
 window.addEventListener("resize", () => {
-    if (window.innerWidth >= 800) { // this destroys the persistence property it maintains on resize from smaller screen to bigger screen
-        document.getElementsByClassName('icon-bar')[0].style.display = "none"; // hides the icon bar;
-        let linkArrayClassVariable = document.getElementsByClassName('linkArray');
-        for (let counter = 0; counter < linkArrayClassVariable.length; counter++) { // to display all other links independently
+    let linkArrayClassVariable = document.getElementsByClassName("linkArray");
+    if (window.innerWidth > 900) {
+        // this destroys the persistence property it maintains on resize from smaller screen to bigger screen
+        document.getElementsByClassName("icon-bar")[0].style.display = "none"; // hides the icon bar;
+
+        for (
+            let counter = 0;
+            counter < linkArrayClassVariable.length;
+            counter++
+        ) {
+            // to display all other links independently
             linkArrayClassVariable[counter].style.display = "block";
+        }
+    } else {
+        document.getElementsByClassName("icon-bar")[0].style.display = "block";
+        for (
+            let counter = 1;
+            counter < linkArrayClassVariable.length;
+            counter++
+        ) {
+            // to display all other links independently
+            linkArrayClassVariable[counter].style.display = "none";
         }
     }
 });
-document.getElementById('icon-bar').addEventListener("click", showLinks); // for smaller screen to trigger the click on icon bar;
+document.getElementById("icon-bar").addEventListener("click", () => {
+    showLinks();
+}); // for smaller screen to trigger the click on icon bar;
 window.addEventListener("load", () => {
     setTimeout(() => {
-        const preloaderContainer = document.getElementsByClassName("preloader")[0];
+        const preloaderContainer = document.getElementsByClassName(
+            "preloader"
+        )[0];
         preloaderContainer.style.display = "none";
     }, 7000);
-})
+});
